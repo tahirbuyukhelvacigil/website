@@ -4,5 +4,4 @@ numpy==1.18.1
 librosa==0.9.0
 pydub==0.25.1
 sklearn==0.0
-matplotlib==0.2
-
+matplotlip==0.2
