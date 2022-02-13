@@ -8,7 +8,7 @@ from  sklearn.preprocessing import StandardScaler,MinMaxScaler
 st.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
 st.header("Bu Web Uygulaması İle Akciğer Sesleri Sınıflandırılabilmektedir.")
 st.sidebar.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
-st.sidebar.subheader("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
+st.sidebar.write("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
 audio_file = open(r'sagliki-derin-nefes (13).wav', 'rb')
 audio_bytes = audio_file.read()
 st.sidebar.audio(audio_bytes, format='audio/wav')
