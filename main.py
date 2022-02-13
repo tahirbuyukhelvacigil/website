@@ -14,7 +14,7 @@ audio_bytes = audio_file.read()
 st.sidebar.audio(audio_bytes, format='audio/wav')
 st.sidebar.subheader("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının 3-7 Saniye Arasında Olması Önerilmektedir.")
 file = st.sidebar.file_uploader("",type=["wav"])
-model = pickle.load(open("C:/Users/helva/PycharmProjects/pythonProject2/model/akciger_ses4.sav", 'rb'))
+model = pickle.load(open("akciger_ses4.sav", 'rb'))
 st.sidebar.title('Sağlıklı Günler Dileriz!')
 
 t1 = 2
