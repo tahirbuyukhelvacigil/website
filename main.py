@@ -7,16 +7,16 @@ import pickle
 from  sklearn.preprocessing import StandardScaler,MinMaxScaler
 st.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
 st.header("Bu Web Uygulaması İle Akciğer Sesleri Sınıflandırılabilmektedir.")
-st.sidebar.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
-st.sidebar.write("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
+st.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
+st.write("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
 audio_file = open(r'sagliki-derin-nefes (13).wav', 'rb')
 audio_bytes = audio_file.read()
-st.sidebar.audio(audio_bytes, format='audio/wav')
-st.sidebar.write('Örnek Ses Kaydı Coswara Verisetinden Alınmıştır.Detaylı Bilgi için: https://github.com/iiscleap/Coswara-Data')
-st.sidebar.write("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının 3-7 Saniye Arasında Olması Önerilmektedir.")
-file = st.sidebar.file_uploader("",type=["wav"])
+st.audio(audio_bytes, format='audio/wav')
+st.write('Örnek Ses Kaydı Coswara Verisetinden Alınmıştır.Detaylı Bilgi için: https://github.com/iiscleap/Coswara-Data')
+st.write("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının 3-7 Saniye Arasında Olması Önerilmektedir.")
+file = st.file_uploader("",type=["wav"])
 model = pickle.load(open("akciger_ses4.sav", 'rb'))
-st.sidebar.title('Sağlıklı Günler Dileriz!')
+st.title('Sağlıklı Günler Dileriz!')
 
 t1 = 2
 t2 = 7
@@ -53,12 +53,13 @@ def siniflama(file):
   data = data.reshape(80, 1)
   st.title('Ses Dosyasının Vektörleri')
   data
+  st.title('Sağlıklı Günler Dileriz!')
  else:
   st.write("Hastalıklı Bir Ses :)")
   st.title('Ses Dosyasının Vektörleri')
   data = data.reshape(80, 1)
   data
-
+  st.title('Sağlıklı Günler Dileriz!')
 
 
 if file is None:
