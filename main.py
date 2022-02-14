@@ -14,7 +14,7 @@ st.markdown('Örnek Ses Kaydı **Coswara** Verisetinden Alınmıştır.Detaylı 
 st.write(" ")
 st.write(" ")
 st.markdown("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının **3-7 Saniye** Arasında Olması Önerilmektedir.")
-file = st.file_uploader("",type=["mp3"])
+file = st.file_uploader("",type=["wav"])
 model = pickle.load(open("akciger_ses4.sav", 'rb'))
 
 
@@ -24,9 +24,7 @@ def extract(file, t1, t2):
  wav = AudioSegment.from_wav(file)
  wav = wav[1000 * t1:1000 * t2]
  wav.export('islenmis.wav', format='wav')
-def wav_yapma(file):
- sound = AudioSegment.from_mp3(file)     
- sound.export("wavolan.wav",format="wav")
+
 
 def siniflama(file):
  file_path = file
@@ -69,7 +67,6 @@ if file is None:
 else:
 
  if st.button('Sınıflandır'):
-    wav_yapma(file)
     extract("wavolan.wav", t1, t2)
     audio_file = open('islenmis.wav', 'rb')
     audio_bytes = audio_file.read()
