@@ -16,7 +16,6 @@ st.write('Örnek Ses Kaydı Coswara Verisetinden Alınmıştır.Detaylı Bilgi i
 st.write("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının 3-7 Saniye Arasında Olması Önerilmektedir.")
 file = st.file_uploader("",type=["wav"])
 model = pickle.load(open("akciger_ses4.sav", 'rb'))
-st.title('Sağlıklı Günler Dileriz!')
 
 t1 = 2
 t2 = 7
