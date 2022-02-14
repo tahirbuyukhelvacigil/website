@@ -24,7 +24,7 @@ def extract(file, t1, t2):
  wav = AudioSegment.from_wav(file)
  wav = wav[1000 * t1:1000 * t2]
  wav.export('islenmis.wav', format='wav')
-def wav_yapma(file)
+def wav_yapma(file):
 sound = AudioSegment.from_mp3(file)     
 sound.export("wavolan.wav",format="wav")
 
