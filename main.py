@@ -24,7 +24,9 @@ def extract(file, t1, t2):
  wav = AudioSegment.from_wav(file)
  wav = wav[1000 * t1:1000 * t2]
  wav.export('islenmis.wav', format='wav')
-
+def wav_yapma(file)
+sound = AudioSegment.from_mp3(file)     
+sound.export("wavolan.wav",format="wav")
 
 def siniflama(file):
  file_path = file
@@ -67,7 +69,8 @@ if file is None:
 else:
 
  if st.button('Sınıflandır'):
-    extract(file, t1, t2)
+    wav_yapma(file)
+    extract("wavolan.wav", t1, t2)
     audio_file = open('islenmis.wav', 'rb')
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/wav')
