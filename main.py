@@ -67,7 +67,7 @@ if file is None:
 else:
 
  if st.button('Sınıflandır'):
-    extract("wavolan.wav", t1, t2)
+    extract(file, t1, t2)
     audio_file = open('islenmis.wav', 'rb')
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/wav')
