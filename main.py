@@ -10,7 +10,7 @@ st.text("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasın�
 audio_file = open(r'sagliki-derin-nefes (13).wav', 'rb')
 audio_bytes = audio_file.read()
 st.audio(audio_bytes, format='audio/wav')
-st.markdown('Örnek Ses Kaydı **Coswara**Verisetinden Alınmıştır.Detaylı Bilgi için: https://github.com/iiscleap/Coswara-Data')
+st.markdown('Örnek Ses Kaydı **Coswara** Verisetinden Alınmıştır.Detaylı Bilgi için: https://github.com/iiscleap/Coswara-Data')
 st.write("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının 3-7 Saniye Arasında Olması Önerilmektedir.")
 file = st.file_uploader("",type=["wav"])
 model = pickle.load(open("akciger_ses4.sav", 'rb'))
