@@ -13,7 +13,7 @@ st.audio(audio_bytes, format='audio/wav')
 st.markdown('Örnek Ses Kaydı **Coswara** Verisetinden Alınmıştır.Detaylı Bilgi için: https://github.com/iiscleap/Coswara-Data')
 st.write(" ")
 st.write(" ")
-st.write("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının 3-7 Saniye Arasında Olması Önerilmektedir.")
+st.markdown("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının **3-7 Saniye** Arasında Olması Önerilmektedir.")
 file = st.file_uploader("",type=["wav"])
 model = pickle.load(open("akciger_ses4.sav", 'rb'))
 
