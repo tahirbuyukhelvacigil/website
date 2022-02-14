@@ -6,7 +6,7 @@ from pydub import AudioSegment
 import pickle
 from  sklearn.preprocessing import StandardScaler,MinMaxScaler
 st.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
-st.text("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
+st.markdown("Daha Doğru Sonuçlar Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
 audio_file = open(r'sagliki-derin-nefes (13).wav', 'rb')
 audio_bytes = audio_file.read()
 st.audio(audio_bytes, format='audio/wav')
