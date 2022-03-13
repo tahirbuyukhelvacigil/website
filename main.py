@@ -26,7 +26,7 @@ t2 = 7
 def extract(file, t1, t2):
  wav = AudioSegment.from_wav(file)
  wav = wav[1000 * t1:1000 * t2]
- wav.export('islenmis.wav', format='wav')
+ wav.export('islenmis2.wav', format='wav')
 
 
 def siniflama(file):
@@ -72,10 +72,10 @@ else:
  if st.button('Sınıflandır'):
     convert_mp3_to_wav(file)
     extract('islenmis.wav', t1, t2)
-    audio_file = open('islenmis.wav', 'rb')
+    audio_file = open('islenmis2.wav', 'rb')
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/wav')
-    siniflama('islenmis.wav')
+    siniflama('islenmis2.wav')
 
 
 
