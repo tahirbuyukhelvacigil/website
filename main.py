@@ -18,7 +18,7 @@ file = st.file_uploader("",type=["mp3"])
 model = pickle.load(open("akciger_ses4.sav", 'rb'))
 
 def convert_mp3_to_wav(music_file):
- sound = AudioSegment.from_mp3(music_file)
+ sound = AudioSegment.from_file(music_file)
  sound.export("islenmis.wav", format="wav")
 
 t1 = 2
