@@ -7,6 +7,9 @@ import ffmpeg
 import pickle
 from  sklearn.preprocessing import StandardScaler,MinMaxScaler
 st.title("Akciğer Seslerindeki Anomali Tespit Uygulaması")
+st.write(" Geliştirme Aşamasında Olan  Mobil Uygulamamıza  Ulaşmak İçin Tıklayınız https://drive.google.com/drive/u/0/folders/14-tre_u1dHj4pTj1v7NfZRkilSwJpE83")
+st.write(" ")
+st.write(" ")
 st.markdown("Daha Doğru Sonuçlar :white_check_mark: Elde Etmek İçin Yükleyeceğiniz Ses Dosyasının :sound: Aşağıdaki Ses Dosyası Gibi Olmasına Dikkat Ediniz.")
 audio_file = open(r'sagliki-derin-nefes (13).wav', 'rb')
 audio_bytes = audio_file.read()
