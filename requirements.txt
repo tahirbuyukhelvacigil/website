@@ -6,3 +6,4 @@ pydub==0.25.1
 sklearn==0.0
 matplotlib==3.5.1
 ffprobe==0.5
+ffmpeg=1.4
