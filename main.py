@@ -3,7 +3,6 @@ import numpy as np
 import librosa
 import librosa.display
 from pydub import AudioSegment
-import ffprobe
 import ffmpeg
 import pickle
 from  sklearn.preprocessing import StandardScaler,MinMaxScaler
