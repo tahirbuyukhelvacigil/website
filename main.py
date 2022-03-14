@@ -14,7 +14,7 @@ st.audio(audio_bytes, format='audio/wav')
 st.markdown('Örnek Ses Kaydı **Coswara** Verisetinden Alınmıştır.Detaylı Bilgi için: https://github.com/iiscleap/Coswara-Data')
 st.write(" ")
 st.write(" ")
-st.markdown("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Wav  Formatındaki Ses Dosyasını Yükleyiniz.Ses Dosyasının **3-7 Saniye** Arasında Olması Önerilmektedir.")
+st.markdown("Sınıflandırma İşleminin Gerçekleşebilmesi İçin Aşağıdaki Bölüme Mp3  Formatındaki Ses Dosyasını Yükleyiniz. Ses Dosyasının **3-7 Saniye** Arasında Olması Önerilmektedir.")
 file = st.file_uploader("",type=["mp3"])
 model = pickle.load(open(r"akciger_ses4.sav", 'rb'))
 
@@ -53,14 +53,9 @@ def siniflama(file):
  print(output)
  if output==[0.]:
   st.write("Gayet Sağlıklı Görünüyorsunuz :)")
-  data = data.reshape(80, 1)
   st.title('Sağlıklı Günler Dileriz! :scream: ')
  else:
-  st.write("Hastalıklı Bir Ses :)")
-  st.title('Ses Dosyasının Vektörleri')
-  data = data.reshape(80, 1)
-  data
-  st.write("Hastalıklı Bir Ses :hospital: ")
+  st.write("Hastalıklı Bir Ses :hospital:")
   st.title('Sağlıklı Günler Dileriz!:scream:')
 
 if file is None:
