@@ -52,7 +52,7 @@ def siniflama(file):
  output = model.predict(data)
  print(output)
  if output==[0.]:
-  st.write("Gayet Sağlıklı Görünüyorsunuz :)")
+  st.write("Gayet Sağlıklı Görünüyorsunuz :smile: ")
   st.title('Sağlıklı Günler Dileriz! :scream: ')
  else:
   st.write("Hastalıklı Bir Ses :hospital:")
